@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+@import "tailwindcss";
+
+img {
+    max-width: 100%;
+}
+
+ul {
+    list-style-type: none;
+}
+
+body{
+    font-family: 'Kumbh Sans', sans-serif; 
+
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: -100vw;
+    width: 70%;
+    height: 100%;
+    z-index: 99;
+    transition: all 0.3s ease-in-out;
+}
+
+nav.open {
+    top: 0;
+    left: 0;
+    padding-right: 4 ;
+    background-color: white;
+    @apply shadow-2xl p-8 lg:shadow-none lg:p-0;
+}
+
+nav ul {
+    padding-top: 40px;
+    @apply flex items-start flex-col gap-4 lg:flex-row;
+} 
+
+nav ul li {
+    @apply font-bold text-lg cursor-pointer hover:text-orange-700 lg:font-normal lg:text-base;
+}
+
+.close{
+    @apply absolute top-8 left-8 cursor-pointer;
+    z-index: 999;
+}
+
+/* Desktop navigation styles - using media query to avoid conflicts */
+@media (min-width: 1024px) {
+    nav { 
+        position: relative; 
+        left: 0; 
+        width: auto; 
+        height: auto; 
+        z-index: auto; 
+    } 
+     
+    nav.open { 
+        background-color: transparent; 
+        @apply shadow-none p-0;
+    } 
+     
+    nav ul{ 
+        padding-top: 0; 
+        @apply flex-row; 
+    }
+}
