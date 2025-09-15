@@ -43,7 +43,7 @@ nav ul li {
 }
 
 .close{
-    @apply absolute top-8 left-8 cursor-pointer;
+    @apply absolute top-8 left-8;
     z-index: 999;
 }
 

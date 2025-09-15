@@ -6,11 +6,11 @@ import close from "../images/icon-close.svg"
 export default function Lightbox ({products, slideIndex, nextSlide, previousSlide, setShowLightbox} ) {
   return (
     <>
-    <article className='inset-0 bg-black/75 fixed top-0 left-0 right-0 bottom-0 z-50 '>
+    <article className='fixed inset-0 bg-black/75 top-0 left-0 right-0 bottom-0 z-50'>
       
        <div className='relative max-w-4xl w-full'>
       <button  onClick={() => setShowLightbox(false)}> 
-      <img src={close} alt='' className='absolute contrast-200 brightness-10 w-4 top-30 right-30 z-60 lg:top-30 lg:-right-96'
+      <img src={close} alt='' className='absolute contrast-200 brightness-10 w-4 top-50 right-5 z-60 lg:top-30 lg:-right-96'
  />
      </button> </div>
 <div className='flex items-center justify-center h-screen lg:mx-auto'>
@@ -19,7 +19,7 @@ export default function Lightbox ({products, slideIndex, nextSlide, previousSlid
     className={slideIndex === index + 1 ?
       "relative" : "hidden"}
     >
-      <img src={item.mainImage} alt='sneakers' className='w-full max-h-[80vh] object-contain rounded-2xl'
+      <img src={item.mainImage} alt='sneakers' className='big-image w-full max-h-[80vh] object-contain rounded-2xl'
 />
     <ul>
      <li>
